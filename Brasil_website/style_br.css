@@ -1,0 +1,70 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('imagens/background_brasil.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(255, 255, 255, 0.6); 
+    background-blend-mode: overlay;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+h1 {
+    font-size: 3em;
+    color: green; 
+    margin: 0;
+    font-weight: bold;
+}
+
+.barra-verde {
+    display: block; 
+    width: 80%;
+    height: 25px;
+    background-color: green;
+    margin: 20px auto;
+}
+
+.conteudo-hino {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding-bottom: 50px;
+}
+
+
+.estrofe-verde {
+    display: block;
+    color: #006400; 
+    margin-bottom: 25px;
+}
+
+p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.audio-canto {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.audio-canto audio {
+    opacity: 0.8;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.audio-canto audio:hover {
+    opacity: 1;
+}
