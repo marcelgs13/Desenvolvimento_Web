@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    font-family: "Times New Roman", Times, serif; 
+    background-color: #c0c0c0; 
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.sidebar h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px; 
+}
+
+.menu a {
+    background-color: #f0a500; 
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid #000000;
+    margin-bottom: -1px; 
+    display: block;
+}
+
+.menu a:hover, .menu a:focus {
+    background-color: #ffee58; 
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moldura {
+    overflow: hidden;
+    border: 6px solid #b38b22; 
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.cabecalho-moldura {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+iframe {
+    width: 500px;
+    height: 500px;
+    border: none;
+    background-color: #ffffff;
+}
