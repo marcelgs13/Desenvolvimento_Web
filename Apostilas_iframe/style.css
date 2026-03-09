@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.topo {
+  text-align: center;
+  padding: 30px 0;
+  border-bottom: 5px solid #000080;
+}
+
+.logo-wordart {
+  font-family: 'Arial Black', Gadget, sans-serif;
+  font-size: 75px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #0000FF;
+  display: inline-block;
+  margin: 0;
+  letter-spacing: -3px;
+  text-shadow: 
+    1px 1px 0px #000080,
+    2px 2px 0px #000080,
+    3px 3px 0px #000080,
+    4px 4px 0px #000080,
+    5px 5px 0px #000080,
+    6px 6px 8px rgba(0,0,0,0.4);
+  transform: scaleY(1.3);
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 180px);
+}
+
+.menu-lateral {
+  width: 220px;
+  border-right: 8px solid #000080;
+  padding: 15px;
+  background-color: #fff;
+}
+
+.menu-titulo {
+  border: 1px solid #000;
+  text-align: center;
+  font-weight: bold;
+  color: #000080;
+  padding: 5px;
+  margin-bottom: 1px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-menu {
+  display: block;
+  background-color: #0000FF;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #000;
+  font-weight: bold;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.btn-menu:hover {
+  background-color: #000080;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.submenu a {
+  display: block;
+  border: 1px solid #000;
+  text-align: center;
+  padding: 8px;
+  color: #000080;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.submenu a:hover {
+  background-color: #f0f0f0;
+}
+
+.area-principal {
+  flex-grow: 1;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.body-interna {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.body-interna h2 {
+  color: #000080;
+  border-bottom: 2px solid #000080;
+  padding-bottom: 10px;
+}
+
+.tabela-conteudo {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-conteudo td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabela-conteudo img {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.tabela-conteudo a {
+  text-decoration: none;
+  color: #000080;
+  font-weight: bold;
+}
+
+.tabela-conteudo a:hover {
+  text-decoration: underline;
+}
+
+.body-home-portal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  background-color: #fff;
+}
+
+.img-home-portal {
+  max-width: 80%;
+  height: auto;
+}

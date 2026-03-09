@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Curso Técnico de Informática</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function toggleSubmenu(id) {
+      var submenu = document.getElementById(id);
+      if (submenu.style.display === "flex") {
+        submenu.style.display = "none";
+      } else {
+        fecharTodos();
+        submenu.style.display = "flex";
+      }
+    }
+
+    function fecharTodos() {
+      var submenus = document.getElementsByClassName('submenu');
+      for (var i = 0; i < submenus.length; i++) {
+        submenus[i].style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body class="body-portal">
+
+  <header class="topo">
+    <h1 class="logo-wordart">Informática</h1>
+  </header>
+
+  <div class="container">
+    <nav class="menu-lateral">
+      <div class="menu-titulo">MENU</div>
+      
+      <ul>
+        <li><a href="index.html" class="btn-menu">Inicial</a></li>
+        
+        <li class="item-submenu">
+          <a href="javascript:void(0)" class="btn-menu" onclick="toggleSubmenu('sub-calculo')">Cálculo numérico</a>
+          <div id="sub-calculo" class="submenu">
+            <a href="Paginas/apostilas_calc.html" target="conteudo">Apostilas</a>
+            <a href="Paginas/aulas_calc.html" target="conteudo">Aulas</a>
+            <a href="Paginas/exercicios_calc.html" target="conteudo">Exercício</a>
+          </div>
+        </li>
+
+        <li class="item-submenu">
+          <a href="javascript:void(0)" class="btn-menu" onclick="toggleSubmenu('sub-embarcados')">Sistemas Embarcados</a>
+          <div id="sub-embarcados" class="submenu">
+            <a href="Paginas/apostilas_embarcados.html" target="conteudo">Apostilas</a>
+            <a href="Paginas/aulas_embarcados.html" target="conteudo">Aulas</a>
+            <a href="Paginas/exercicios_embarcados.html" target="conteudo">Exercício</a>
+          </div>
+        </li>
+        
+        <li class="item-submenu">
+          <a href="javascript:void(0)" class="btn-menu" onclick="toggleSubmenu('sub-poo')">Programação Orientada a Objetos</a>
+          <div id="sub-poo" class="submenu">
+            <a href="Paginas/apostilas_poo.html" target="conteudo">Apostilas</a>
+            <a href="Paginas/aulas_poo.html" target="conteudo">Aulas</a>
+            <a href="Paginas/exercicios_poo.html" target="conteudo">Exercício</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="area-principal">
+      <iframe name="conteudo" src="Paginas/home_portal.html" frameborder="0"></iframe>
+    </main>
+  </div>
+
+</body>
+</html>
