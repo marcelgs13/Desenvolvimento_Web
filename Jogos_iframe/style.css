@@ -1,0 +1,132 @@
+/*Estilo do Index*/
+.body-index {
+  background-color: #222;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.5) 2px, transparent 2px),
+    linear-gradient(rgba(0, 0, 0, 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.28) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  margin: 0;
+  padding: 10px; 
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh; 
+}
+
+table {
+  background-color: black;
+  text-align: center;
+  border: 8px solid rgb(103, 101, 101);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  width: 90%;
+  max-width: 950px;
+}
+
+th {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.data span {
+  color: white;
+  font-size: 15px;
+  display: block;
+  text-align: right;
+  padding-right: 15px;
+  margin-bottom: 10px;
+}
+
+.divisao {
+  text-align: center;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 550px;
+  background-color: black; 
+}
+
+.controles {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.botao {
+  background-color: #525453;
+  border: 2px solid #333;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.botao:hover {
+  background-color: #666;
+}
+
+/* Estilo da Página de Jogos */
+.body-jogo {
+  margin: 0;
+  padding: 10px; 
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+  overflow: hidden; 
+}
+
+.caixa-jogo {
+  background-color: #222;
+  border: 5px solid #555;
+  width: 100%; 
+  max-width: 800px;
+  height: 100%; 
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+}
+
+.titulo-jogo {
+  background-color: #8f8f8f;
+  color: black;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #222;
+  flex-shrink: 0; 
+}
+
+.grade-imagens {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0; 
+  padding: 0;
+  background-color: transparent; 
+  flex-grow: 1; 
+  min-height: 0; 
+}
+
+.grade-imagens img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+}
