@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 04</title>
+</head>
+
+<body>
+    <script>
+        let distancia = 295;
+        let precoGas = 0.75;
+
+        let morcego = {
+            nome: "Morcego Preto",
+            aluguel: 300,
+            consumo: 16
+        };
+
+        let vampiro = {
+            nome: "Vampiro Voador",
+            aluguel: 500,
+            consumo: 11
+        };
+
+        let custoGasolinaMorcego = (distancia / morcego.consumo) * precoGas;
+        let totalMorcego = morcego.aluguel + custoGasolinaMorcego;
+
+        let custoGasolinaVampiro = (distancia / vampiro.consumo) * precoGas;
+        let totalVampiro = vampiro.aluguel + custoGasolinaVampiro;
+
+        document.write("<strong>" + morcego.nome + "</strong><br>");
+        document.write("Custo do Aluguel: $" + morcego.aluguel + "<br>");
+        document.write("Custo Total da Viagem: $" + totalMorcego.toFixed(2) + "<br><br>");
+
+        document.write("<strong>" + vampiro.nome + "</strong><br>");
+        document.write("Custo do Aluguel: $" + vampiro.aluguel + "<br>");
+        document.write("Custo Total da Viagem: $" + totalVampiro.toFixed(2) + "<br>");
+    </script>
+</body>
+
+</html>
