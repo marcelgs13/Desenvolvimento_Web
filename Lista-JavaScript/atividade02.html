@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 02</title>
+</head>
+
+<body>
+    <script>
+        let numeros = [];
+        for (let i = 0; i < 10; i++) {
+            numeros[i] = Math.floor(Math.random() * 101); // 0 a 100
+        }
+
+        let ordenados = [];
+        for (let i = 0; i < 10; i++) {
+            ordenados[i] = numeros[i];
+        }
+
+        ordenados.sort(function(a, b) {
+            return a - b; 
+        });
+
+        let pares = "", impares = "", paresMenores50 = "", imparesOrdenados = "";
+        for (let i = 0; i < 10; i++) {
+            if (numeros[i] % 2 === 0) pares += numeros[i] + " ";
+            else impares += numeros[i] + " ";
+
+            if (ordenados[i] % 2 === 0 && ordenados[i] < 50) paresMenores50 += ordenados[i] + " ";
+            if (ordenados[i] % 2 !== 0) imparesOrdenados += ordenados[i] + " ";
+        }
+
+        document.write("<table border='1'>");
+        document.write("<tr><td>Todos os números</td><td>" + numeros.join(" ") + "</td></tr>");
+        document.write("<tr><td>Números pares</td><td>" + pares + "</td></tr>");
+        document.write("<tr><td>Números ímpares</td><td>" + impares + "</td></tr>");
+        document.write("<tr><td>Todos ordenados</td><td>" + ordenados.join(" ") + "</td></tr>");
+        document.write("<tr><td>Pares < 50 ordenados</td><td>" + paresMenores50 + "</td></tr>");
+        document.write("<tr><td>Ímpares ordenados</td><td>" + imparesOrdenados + "</td></tr>");
+        document.write("</table>");
+    </script>
+</body>
+
+</html>

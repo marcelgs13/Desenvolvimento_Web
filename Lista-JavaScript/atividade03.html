@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 03</title>
+</head>
+
+<body>
+    <script>
+        let palavras = ["friend", "amico", "prijatelj", "Freund", "ven", "ystävä", "пријатељ", "Mellon", "amigo", "barát"];
+        
+        let alvo = "Mellon"; 
+        
+        let contagem = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        let tentativas = 0;
+        let acertou = false;
+
+        while (!acertou) {
+            let indice = Math.floor(Math.random() * 10);
+            contagem[indice]++;
+            tentativas++;
+
+            if (palavras[indice] === alvo) {
+                acertou = true;
+            }
+        }
+        let maisRepetida = "";
+        let maxRepeticoes = 0;
+
+        for (let i = 0; i < 10; i++) {
+            if (palavras[i] !== alvo && contagem[i] > maxRepeticoes) {
+                maxRepeticoes = contagem[i];
+                maisRepetida = palavras[i];
+            }
+        }
+        document.write("<strong>Palavra correta:</strong> " + alvo + "<br>");
+        document.write("<strong>Tentativas totais até acertar:</strong> " + tentativas + "<br>");
+        
+        if (maxRepeticoes > 0) {
+            document.write("<strong>A palavra errada que mais se repetiu foi:</strong> '" + maisRepetida + "' (" + maxRepeticoes + " vezes).");
+        } else {
+            document.write("Nenhuma palavra errada se repetiu.");
+        }
+    </script>
+</body>
+
+</html>
