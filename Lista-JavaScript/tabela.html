@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Tabela de Números Pares e Ímpares</title>
+    <style>
+        table {
+            border-collapse: collapse; 
+            text-align: center;
+            font-family: Arial, sans-serif;
+            width: 100%;
+        }
+        th {
+            background-color: #ffdab9; 
+            border: 1px solid gray;
+            padding: 5px;
+        }
+        td {
+            border: 1px solid gray;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // Definindo o tamanho da tabela
+        let totalLinhas = 20;
+        let totalColunas = 30;
+
+        document.write("<table>");
+        document.write("<tr><th colspan='" + totalColunas + "'>Números</th></tr>");
+
+        for (let i = 0; i < totalLinhas; i++) {
+            document.write("<tr>");
+            for (let j = 0; j < totalColunas; j++) {               
+                let numeroAleatorio = Math.floor(Math.random() * 1001);                
+                let corDeFundo = "";
+
+                if (numeroAleatorio % 2 === 0) {
+                    corDeFundo = "yellow"; 
+                } else {
+                    corDeFundo = "cyan";   
+                }
+                document.write("<td style='background-color: " + corDeFundo + ";'>" + numeroAleatorio + "</td>");
+            }       
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+
+</html>
