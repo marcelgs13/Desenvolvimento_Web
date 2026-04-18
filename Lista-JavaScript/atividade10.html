@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 10</title>
+</head>
+
+<body>
+    <script>
+        let arrayBase = [];
+        for (let i = 0; i < 20; i++) arrayBase[i] = i * 2; 
+        document.write("<strong>Array Original:</strong> [" + arrayBase + "]<br><br>");
+
+        let novoNumero = parseInt(prompt("Digite um número qualquer:"));
+        let indiceArray = parseInt(prompt("Digite um índice (0 a " + (arrayBase.length - 1) + "):"));
+
+        if (indiceArray < 0 || indiceArray >= arrayBase.length) {
+            document.write("O índice escolhido não pertence ao array.");
+        } else {
+            let opcao = prompt("Digite a opção (adicionar, substituir, excluir):").toLowerCase();
+
+            if (opcao === "adicionar") {
+                // Deslocando para a direita 
+                for (let i = arrayBase.length; i > indiceArray; i--) {
+                    arrayBase[i] = arrayBase[i - 1];
+                }
+                arrayBase[indiceArray] = novoNumero;
+
+            } else if (opcao === "substituir") {
+                arrayBase[indiceArray] = novoNumero;
+
+            } else if (opcao === "excluir") {
+                // Deslocando para a esquerda 
+                for (let i = indiceArray; i < arrayBase.length - 1; i++) {
+                    arrayBase[i] = arrayBase[i + 1];
+                }
+                arrayBase.length = arrayBase.length - 1; 
+            }
+            document.write("<strong>Opção executada:</strong> " + opcao + "<br>");
+            document.write("<strong>Novo array:</strong> [" + arrayBase + "]");
+        }
+    </script>
+</body>
+
+</html>

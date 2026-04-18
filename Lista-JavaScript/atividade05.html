@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 05</title>
+</head>
+
+<body>
+    <script>
+        let nTermos = prompt("Digite o número de termos para o sequência:") * 1;
+        
+        let S = 0;
+        let num = 2; 
+        let den = 3; 
+        let expressao = "S = ";
+
+        for (let i = 1; i <= nTermos; i++) {
+            let valorTermo = num / den;
+            let sinal = "";
+            
+            // O padrão notado multiplos de 3 são positivos, os demais negativos
+            if (i % 3 === 0) {
+                S += valorTermo;
+                sinal = "+";
+            } else {
+                S -= valorTermo;
+                sinal = "-";
+            }
+            
+            if (i === 1) {
+                expressao += "-" + num + "/" + den;
+            } else {
+                expressao += " " + sinal + " " + num + "/" + den;
+            }
+            num += 1; 
+            den += 2; 
+        }
+
+        document.write("<strong>Expressão:</strong> " + expressao + "<br><br>");
+        document.write("<strong>Valor final de S:</strong> " + S.toFixed(4));
+    </script>
+</body>
+
+</html>

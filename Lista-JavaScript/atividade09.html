@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 09</title>
+</head>
+
+<body>
+    <script>
+        let array20 = [];
+        for (let i = 0; i < 20; i++) {
+            array20[i] = Math.floor(Math.random() * 100);
+        }
+
+        //lógica do bubble sort
+        for (let i = 0; i < 20; i++) {
+            for (let j = 0; j < 19; j++) {
+                if (array20[j] > array20[j + 1]) {
+                    let temp = array20[j];
+                    array20[j] = array20[j + 1];
+                    array20[j + 1] = temp;
+                }
+            }
+        }
+
+        for (let i = 0; i < 20; i++) {
+            let cor = (array20[i] % 2 === 0) ? "blue" : "green";
+            document.write("<span style='background-color: " + cor + "; color: white; padding: 5px; margin: 2px;'>" + array20[i] + "</span>");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 07</title>
+</head>
+
+<body>
+    <script>
+        let num = prompt("Digite um número inteiro para verificar seu fatorial:") * 1;
+        let fatorial = 1;
+
+        if (num < 0) {
+            document.write("Fatorial não é definido para números negativos.");
+        } else if (num === 0) {
+            document.write("O fatorial de 0 é 1.");
+        } else {
+            for (let i = 1; i <= num; i++) {
+                fatorial *= i;
+            }
+            
+            document.write("<strong>Número:</strong> " + num + "<br>");
+            document.write("<strong>Fatorial:</strong> " + fatorial);
+        }
+    </script>
+</body>
+
+</html>
