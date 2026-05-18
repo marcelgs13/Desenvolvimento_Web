@@ -1,7 +1,7 @@
 <?php
 $host = '127.0.0.1'; // Usar o IP local ajuda a evitar problemas de DNS interno
 $port = '3306';      // <-- DEFININDO A PORTA DO XAMPP QUE ESTÁ ATIVA
-$db   = 'portal_ted';
+$db   = 'portal_batman';
 $user = 'root';
 $pass = '';
 
